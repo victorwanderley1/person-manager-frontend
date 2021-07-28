@@ -18,5 +18,8 @@ export class PersonAddComponent{
             },
             error: e => console.log('Error: ', e)
         })
+        setTimeout(() => {
+            
+        }, 5000);
     }
 }
