@@ -1,4 +1,4 @@
-import { Component, SystemJsNgModuleLoader} from "@angular/core";
+import { Component} from "@angular/core";
 import { Person } from "./person";
 import { PersonService } from "./person.service";
 
