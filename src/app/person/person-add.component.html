@@ -1,0 +1,45 @@
+<h2>Person Edit</h2>
+
+<form #personForm="ngForm">
+    <div class="ngForm">
+        
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="person.name" required name="name" #personName="ngModel"
+                [ngClass]="{'is-invalid': personName.invalid}" class="form-control">
+            <div class="invalid-feedback">
+                <span>Person name is required</span>
+            </div>
+        </div>
+    </div>
+    <div class="ngForm">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="person.phone" required name="phone" #personPhone="ngModel"
+                    [ngClass]="{'is-invalid': personPhone.invalid}" class="form-control">
+                <div class="invalid-feedback">
+                    <span>Person's phone is required</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ngForm">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="person.email" required name="email" #personEmail="ngModel"
+                    [ngClass]="{'is-invalid': personEmail.invalid}" class="form-control">
+                <div class="invalid-feedback">
+                    <span>Person's email is required</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-2">
+        <button [disabled]="personForm.invalid" (click)="save()" [routerLink]="['/persons']" class="btn btn-primary mr-2">Save</button>
+        <button [routerLink]="['/persons']" class="btn btn-secondary ml-10">Back</button>
+    </div>
+</form>
